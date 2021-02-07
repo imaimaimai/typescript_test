@@ -42,9 +42,25 @@ class HardToDebugUser {
   }
 }
 
+class EasyToDebugUser {
+  constructor(
+    private id: number,
+    private firstName: string,
+    private lastName:string
+  ){}
+
+  getDebugValue() {
+    return {
+      id: this.id,
+      name: `${this.firstName} ${this.lastName}`
+    }
+  }
+}
+
 const User = withEZDebug(HardToDebugUser)
 const user = new User(3, 'Michio', 'Imai')
 console.log(user.debug())
+console.log(user.constructor.name)
 
 
 // class Hoge {

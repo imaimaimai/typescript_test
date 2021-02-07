@@ -12,7 +12,6 @@ let reserve: Reserve = (from: Date, toOrDestination:Date | string, destination?:
   
 }
 
-
 class Reservation {
   from: Date;
   toOrDestination: Date | string;

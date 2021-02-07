@@ -15,11 +15,13 @@ namespace hogehogehoge {
     }
     console.log(car)
   }
-  class Animal {
+  abstract class Animal {
     id:number
     name: string
     length: number
     weight: number
+
+    
 
     constructor(id: number, name:string, length:number, weight:number) {
       this.id = id;
@@ -40,9 +42,21 @@ namespace hogehogehoge {
     }
   }
 
+  class Dog extends Animal {
+
+    constructor(id: number, name:string, length: number, weight: number) {
+      super(id, name, length, weight);
+    }
+  }
+
   const michio = new Human(1,"michio", 174, 75,70,100);
   const katoono = new Human(2, "katoono",170,110,100,70);
   console.log(michio.name)
   console.log(katoono.zakou)
+
+  const dog = new Dog(1, "michio", 177, 100);
+
+  
+
 
 }
